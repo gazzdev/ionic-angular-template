@@ -69,9 +69,9 @@
     "ts-node": "~8.3.0",
     "typescript": "~4.2.4"
   },
-  "description": "Ionic Angular template application with pre-configured settings/scripts - OnPush change detection, eslint, prettier, huskey pre-commit/push",
+  "description": "Ionic Angular template application with pre-configured settings/scripts - OnPush change detection, eslint, prettier, huskey pre-commit",
   "lint-staged": {
-    "src/**/*.*": [
+    "**/*.*": [
       "npm run format:check"
     ]
   }

@@ -20,7 +20,7 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "**/src/*.*": [
+    "*.*": [
       "npm run format:write"
     ]
   },

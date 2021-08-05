@@ -1,10 +1,11 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-#npm run format:format
+# Bypass lint-staged as it doesn't work correctly with angular
+npm run format:check
 
 # Would like to use lint-staged to only
 # lint and format files that are staged
 # but there is a bug where the command gets passed either
 # "package.json" or a file path, which breaks the command
-npm run pre-commit
+#npm run pre-commit

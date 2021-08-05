@@ -1,6 +1,10 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-# Test first, if fail run manually
-npm run format:check
-#npm run pre-commit
+#npm run format:format
+
+# Would like to use lint-staged to only
+# lint and format files that are staged
+# but there is a bug where the command gets passed either
+# "package.json" or a file path, which breaks the command
+npm run pre-commit

@@ -2,5 +2,6 @@
 *.generated.clients.ts
 
 # Ignore build folders
-dist
-node_modules
+**/dist/
+**/www/
+**/node_modules/

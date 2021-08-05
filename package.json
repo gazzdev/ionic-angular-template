@@ -11,16 +11,12 @@
     "test": "ng test",
     "test:singlerun": "npm run test -- --browsers ChromeHeadless --watch=false",
     "lint": "ng lint",
-    "lint:fix": "npm run lint -- --fix",
+    "lint:fix": "ng lint --fix",
     "prettier": "prettier . --check",
     "prettier:write": "prettier . --write",
-    "format:write": "npm run prettier:write && npm run lint:fix"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run format:write",
-      "pre-push": "npm run test:singlerun"
-    }
+    "format:write": "npm run prettier:write && npm run lint:fix",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged --debug"
   },
   "private": true,
   "dependencies": {
@@ -57,7 +53,7 @@
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsdoc": "30.7.6",
     "eslint-plugin-prefer-arrow": "1.2.2",
-    "husky": "^7.0.1",
+    "husky": "^7.0.0",
     "jasmine-core": "~3.8.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~6.3.2",
@@ -66,10 +62,16 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "lint-staged": "^11.1.1",
     "prettier": "2.3.2",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "typescript": "~4.2.4"
   },
-  "description": "Ionic Angular template application with pre-configured settings/scripts - OnPush change detection, eslint, prettier, huskey pre-commit/push"
+  "description": "Ionic Angular template application with pre-configured settings/scripts - OnPush change detection, eslint, prettier, huskey pre-commit/push",
+  "lint-staged": {
+    "src/**/*.*": [
+      "npm run format:write"
+    ]
+  }
 }

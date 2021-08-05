@@ -1,0 +1,6 @@
+# Ignore auto-generated files created by swagger for performance
+*.generated.clients.ts
+
+# Ignore build folders
+dist
+node_modules

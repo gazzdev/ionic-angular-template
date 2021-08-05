@@ -5,6 +5,7 @@ This project will be kept up to date with the latest frameworks
 
 Pre-configured features
 
+- Angular OnPush change detection
 - Prettier
 - ESLint
   - ESLint Prettier config

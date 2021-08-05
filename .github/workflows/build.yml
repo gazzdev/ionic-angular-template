@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -26,12 +26,12 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "14"
-          
-      - name : install
+
+      - name: install
         run: npm install
-        
+
       - name: test
         run: npm run test:singlerun
-        
+
       - name: build
         run: npm run build

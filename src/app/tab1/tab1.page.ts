@@ -7,5 +7,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Tab1Page {
-  constructor() {}
+  constructor() {
+    console.log('tab 1');
+  }
 }

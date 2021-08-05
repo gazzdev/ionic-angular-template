@@ -10,11 +10,12 @@
     "e2e": "ng e2e",
     "test": "ng test",
     "test:singlerun": "npm run test -- --browsers ChromeHeadless --watch=false",
-    "lint": "ng lint",
-    "lint:fix": "ng lint --fix",
-    "prettier": "prettier . --check",
+    "lint:check": "ng lint",
+    "lint:write": "ng lint --fix",
+    "prettier:check": "prettier . --check",
     "prettier:write": "prettier . --write",
-    "format:write": "npm run prettier:write && npm run lint:fix",
+    "format:check": "npm run prettier:check && npm run lint:check",
+    "format:write": "npm run prettier:write && npm run lint:write",
     "prepare": "husky install",
     "pre-commit": "lint-staged --debug"
   },
@@ -71,7 +72,7 @@
   "description": "Ionic Angular template application with pre-configured settings/scripts - OnPush change detection, eslint, prettier, huskey pre-commit/push",
   "lint-staged": {
     "src/**/*.*": [
-      "npm run format:write"
+      "npm run format:check"
     ]
   }
 }

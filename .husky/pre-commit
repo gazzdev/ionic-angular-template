@@ -2,5 +2,5 @@
 . "$(dirname "$0")/_/husky.sh"
 
 # Test first, if fail run manually
-#npm run format:check
-npm run pre-commit
+npm run format:check
+#npm run pre-commit

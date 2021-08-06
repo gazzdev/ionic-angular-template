@@ -9,7 +9,7 @@ if [ "$branch" = "main" ]; then
 fi
 
 # Bypass lint-staged as it doesn't work correctly with angular
-npm run format:check
+cd src/app && npm run format:check
 
 # Would like to use lint-staged to only
 # lint and format files that are staged

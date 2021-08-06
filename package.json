@@ -4,16 +4,9 @@
   "description": "Template client and server application built with Ionic Angular and .Net5",
   "main": "index.js",
   "scripts": {
-    "test": "cd src/app && npm run test",
-    "format:write": "cd src/app && npm run format:write",
     "prepare": "husky install",
-    "pre-commit": "lint-staged",
+    "pre-commit": "cd src/app && npm run format:check",
     "commit-msg": "commitlint -e"
-  },
-  "lint-staged": {
-    "*.*": [
-      "cd src/app && npm run format:write"
-    ]
   },
   "repository": {
     "type": "git",
@@ -27,7 +20,6 @@
   "homepage": "https://github.com/gazzdev/ionic-angular-template#readme",
   "devDependencies": {
     "husky": "^7.0.1",
-    "lint-staged": "^11.1.2",
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0"
   }

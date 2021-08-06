@@ -8,12 +8,4 @@ if [ "$branch" = "main" ]; then
   exit 1
 fi
 
-# Bypass lint-staged as it doesn't work correctly with angular
-# npm run pre-commit
-
-# Would like to use lint-staged to only
-# lint and format files that are staged
-# but there is a bug where the command gets passed either
-# "package.json" or a file path, which breaks the command
-#npm run pre-commit
-npx lint-staged
+npm run pre-commit
